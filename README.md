@@ -19,6 +19,7 @@ Here is my attempt to resolve the problem. This is a tap that installs libXft
 freetype and fontconfig, however with a dynamic dependency on XQuartz libX11
 and libXrender. Install it with
 
+    brew install dk/x11/xorg-macros
     brew install dk/x11/libxft
 
 Beware, it is rather hacky and might not build because this is my first ever
