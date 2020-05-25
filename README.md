@@ -3,15 +3,15 @@ X11 libs for Homebrew
 
 The last currently available XQuartz build is from 2016, and the X11 libs that
 it comes with, are outdated as well. Whenever there is a need to link a library
-with both X11 libs and the libraries from homebrew, a conflict possible. This
-is why homebrews usually is focused on non-X11 projects, although there are
-many that are either only X11-based or don't create conflicts.
+with both X11 libs and the libraries from homebrew, a conflict is possible. This
+is why homebrew usually is focused on non-X11 projects, although there are
+many that are either only X11-based or don't create such conflicts.
 
 Enter font shaping with harfbuzz and font display with libXft. Harfbuzz is a
 modern library that has a freetype2 backend, which is both shipped with XQuartz
 and homebrew. libXft is a respectable core library for drawing, among others,
-freetype2 fonts, and comes with XQuartz.  Linking both in one program is
-impossible, because XQuartz's libfreetype and homebrew's freetype are of
+freetype2 fonts, and comes with XQuartz only. Linking both in one program is
+impossible, because XQuartz's freetype and homebrew's freetype are of
 different versions and are binary incompatible.
 
 Here is my attempt to resolve the problem. This is a tap that installs libXft
